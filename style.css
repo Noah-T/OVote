@@ -1,0 +1,64 @@
+form {
+	margin: 0 auto;
+	text-align: center;
+	width: 225px;
+	display: block;
+}
+
+#formTitle, .questionWrapper, #responseHeader {
+	text-align: center;
+}
+input, select {
+
+	display: block;
+	height: 30px;
+	margin: 10px auto;
+	width: 225px;
+
+}
+
+.questionImage {
+	height: 44px;
+	width: 44px;
+}
+
+.questionChoice {
+	height: 40px;
+	width: 90%;
+	display: block;
+	margin: 15px auto;
+	
+}
+
+.questionWrapper, .commentSectionWrapper {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.questionComment {
+	text-align: center;
+}
+
+.nameOfPoster, .commentFromPoster {
+	text-align: left;
+}
+
+.socialMediaWrapper {
+	width: 92px;
+	margin: 20px auto;
+}
+
+#responseVisualization {
+	max-width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.questionToAnswer {
+	list-style: none;
+	max-width: 90%;
+	height: 44px;
+	text-align: center;
+	background-color: 
+}
+
