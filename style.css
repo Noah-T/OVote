@@ -5,7 +5,12 @@ form {
 	display: block;
 }
 
-#formTitle, .questionWrapper, #responseHeader {
+form.createQuestionForm {
+	width: 350px;
+	margin-bottom: 55px;
+}
+
+#formTitle, .questionWrapper, #responseHeader, #questionHeader, #groupListTitle {
 	text-align: center;
 }
 input, select {
@@ -56,9 +61,95 @@ input, select {
 
 .questionToAnswer {
 	list-style: none;
-	max-width: 90%;
+	max-width: 320px;
 	height: 44px;
 	text-align: center;
-	background-color: 
+	background-color: #0BD7E2;
+	color: white;
+	font-size: 1.5em;
+	margin: 10px auto;
 }
 
+ul.questionList {
+	margin: 0;
+	padding: 0;
+}
+
+#askQuestion {
+	margin: 10px auto;
+	display: block;
+}
+
+textarea {
+	width: 100%;
+	height: 200px;
+}
+
+img.groupImage {
+
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+
+}
+
+img.groupImage, .groupName {
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+.addIcon, .checkmarkIcon {
+	position: relative;
+  top: -7%;
+  -webkit-transform: translateY(-7%);
+
+}
+
+.addIcon, .checkmarkIcon {
+	width: 54px;
+	height: 54px;
+	display: inline-block;
+	float: right;
+	margin-right: 15px;
+
+}
+
+.groupItem {
+	background-color: #7FDAE2;
+	margin-bottom: 15px;
+	height: 100px;
+
+}
+
+.groupName {
+
+	font-size: 1.3em;
+	margin-left: 90px;
+}
+
+#groupSearch {
+	width: 90%;
+}
+
+.groupSwitch {
+	height: 50px;
+	width: 91%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+.groupOption {
+	width: 48%;
+	display: inline-block;
+	text-align: center;
+	background-color: gray;
+
+}
+
+.groupSelected {
+	background-color: #53E295;
+}

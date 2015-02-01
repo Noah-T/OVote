@@ -5,44 +5,49 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-	<h1 id="formTitle">Sign Up</h1>
-	<form>
-		<input type="text" placeholder="Name">
-		<input type="text" placeholder="Password">
-		<input type="text" placeholder="Email">
+	<div class="mainContentWrapper">
+		<ul class="mainContentList"></ul>
+		<h1 id="formTitle">Sign Up</h1>
+		<form>
+			<input type="text" placeholder="Name" id="nameField">
+			<input type="text" placeholder="Username" id="usernameField">
+			<input type="text" placeholder="Password" id="passwordField">
+			<input type="text" placeholder="Email" id="emailField">
+			
+			<label for="age">Registration Status</label>
+			<select name="age" id="ageField">
+				<option value="under18">Under 18</option>
+				<option value="18-34">18-34</option>
+				<option value="35-55">35-55</option>
+				<option value="55+">35-55</option>
+			</select>
+
+			<input type="text" placeholder="Zipcode" id="zipcodeField">
+			<select>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select>
+			<input type="text" placeholder="Ethnicity" id="ethnicityField">
+			<label for="party">Party Affiliation</label>
+			<select name="party" id="partyField">
+				<option value="democrat">Democrat</option>
+				<option value="republican">Republican</option>
+				<option value="other">Other</option>
+			</select>
+			<label for="registrationStatus">Registration Status</label>
+			<select name="registrationStatus" id="registrationStatusField">
+				<option value="registered">Registered</option>
+				<option value="notRegistered">Not Registered</option>
+				<option value="other">Other</option>
+			</select>
+			<button type="submit" id="signup">Sign Up</button>	
+		</form>
 		
-		<label for="age">Registration Status</label>
-		<select name="age">
-			<option value="under18">Under 18</option>
-			<option value="18-34">18-34</option>
-			<option value="35-55">35-55</option>
-			<option value="55+">35-55</option>
-		</select>
-
-		<input type="text" placeholder="Zipcode">
-		<select>
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-			<option value="other">Other</option>
-		</select>
-		<input type="text" placeholder="Ethnicity">
-		<label for="party">Party Affiliation</label>
-		<select name="party">
-			<option value="democrat">Democrat</option>
-			<option value="republican">Republican</option>
-			<option value="other">Other</option>
-		</select>
-		<label for="registrationStatus">Registration Status</label>
-		<select name="registrationStatus">
-			<option value="registered">Registered</option>
-			<option value="notRegistered">Not Registered</option>
-			<option value="other">Other</option>
-		</select>
-		<button type="submit">Sign Up</button>	
-	</form>
-		
-
-
-
+	</div>
+	
+		<script src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript"  src="javascript/javascript.js"></script>
 	</body>
 </html>
