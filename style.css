@@ -103,9 +103,8 @@ img.groupImage, .groupName {
 }
 .addIcon, .checkmarkIcon {
 	position: relative;
-  top: -7%;
-  -webkit-transform: translateY(-7%);
-
+	top: -2%;
+	-webkit-transform: translateY(-2%);
 }
 
 .addIcon, .checkmarkIcon {
@@ -114,7 +113,6 @@ img.groupImage, .groupName {
 	display: inline-block;
 	float: right;
 	margin-right: 15px;
-
 }
 
 .groupItem {
@@ -125,7 +123,7 @@ img.groupImage, .groupName {
 }
 
 .groupName {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	margin-left: 90px;
 }
 
