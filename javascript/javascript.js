@@ -1,6 +1,27 @@
 Parse.initialize("lh70BfND6DfblGhM5tmj4n1pgQvmYrz7Q1Xuh604", "cfZJ9v9yyST2T0dQgGGdOFVDethazDQTo6R3MAOP");
 
+//log in
 
+$("#submitLogin").click(function(event){
+	event.preventDefault();
+	var username = $("#loginUsername").val();
+	var password = $("#loginPassword").val();
+	Parse.User.logIn(username, password, {
+  success: function(user) {
+    // Do stuff after successful login.
+    if(!user.attributes.isALegislator){
+    	loadConstituentView();
+    } else {
+    	loadLegislatorView();
+    }
+  },
+  error: function(user, error) {
+    // The login failed. Check error to see why.
+    debugger;
+    alert(error);
+  }
+});
+});
 //sign up a constituent
 $("#signup").click(function(event){
 	event.preventDefault();
@@ -138,19 +159,18 @@ function loadConstituentView(){
 				$(".mainContentWrapper").html("<img src='images/back-arrow.png' class='backArrow'>" +
 					'<div class="questionWrapper">' +
 			'<h1>Senator Warren wants to know: </h1>' +
-			'<p>Would you rather have a bridge or an awesome new playground (that will be much more fun than a bridge)</p>' +
-			'<button class="questionChoice">Vote A</button>' +
-			'<button class="questionChoice">Vote B</button>' +
-			'<button class="questionChoice">Vote C</button>' +
+			'<p>Should I vote to approve the construction of the Keystone XL pipeline?</p>' +
+			'<button class="questionChoice">Yes</button>' +
+			'<button class="questionChoice">No</button>' +	
 		'</div>' +
 		'<div class="commentSectionWrapper">' +
 			'<div class="questionComment">' +
-			'<h5 class="nameOfPoster">Joe the Plumber</h5>' +
-			'<p class="commentFromPoster">Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me</p>' +
+			'<h5 class="nameOfPoster">JamesBrill</h5>' +
+			'<p class="commentFromPoster">The Keystone XL pipeline is an important source of oil for the United States. Canada produces &#34ethical oil.&#34 We don&#39t have to fight wars to get it like the oil from Iraq or Libya, and we don&#39t have to buy it from oppressive monarchical regimes like Saudi Arabia. If we want an secure, ethical, source of oil we should build the Keystone XL.</p>' +
 		'</div>' +
 		'<div class="questionComment">' +
-			'<h5 class="nameOfPoster">Barack Obama</h5>' +
-			'<p class="commentFromPoster">I don\'t like plumbing</p>'+
+			'<h5 class="nameOfPoster">Mill244</h5>' +
+			'<p class="commentFromPoster">Don&#39t build it! Global warming is the problem. Building this pipeline will make the problem worse. The Keystone XL will make it easier for Americans to get cheap oil and this will encourage more people to use more gas - making the problem worse. Also, the source of the oil is the Alberta oil sands - the most unsustainable oil extraction process on earth. If you care about the environment you will vote no.</p>'+
 		'</div>' +
 		
 		'<div class="socialMediaWrapper">' +
@@ -168,4 +188,41 @@ function loadConstituentView(){
 	loadGroupsView();
 	
 } 
+
+<h1 id="formTitle">Sign Up</h1>
+		<form>
+			<input type="text" placeholder="Name" id="nameField">
+			<input type="text" placeholder="Username" id="usernameField">
+			<input type="password" placeholder="Password" id="passwordField">
+			<input type="text" placeholder="Email" id="emailField">
+			
+			<label for="age">Registration Status</label>
+			<select name="age" id="ageField">
+				<option value="under18">Under 18</option>
+				<option value="18-34">18-34</option>
+				<option value="35-55">35-55</option>
+				<option value="55+">35-55</option>
+			</select>
+
+			<input type="text" placeholder="Zipcode" id="zipcodeField">
+			<select>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select>
+			<input type="text" placeholder="Ethnicity" id="ethnicityField">
+			<label for="party">Party Affiliation</label>
+			<select name="party" id="partyField">
+				<option value="democrat">Democrat</option>
+				<option value="republican">Republican</option>
+				<option value="other">Other</option>
+			</select>
+			<label for="registrationStatus">Registration Status</label>
+			<select name="registrationStatus" id="registrationStatusField">
+				<option value="registered">Registered</option>
+				<option value="notRegistered">Not Registered</option>
+				<option value="other">Other</option>
+			</select>
+			<button type="submit" id="signup">Sign Up</button>	
+		</form>
 
