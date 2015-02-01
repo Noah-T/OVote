@@ -125,7 +125,6 @@ img.groupImage, .groupName {
 }
 
 .groupName {
-
 	font-size: 1.3em;
 	margin-left: 90px;
 }
@@ -147,9 +146,16 @@ img.groupImage, .groupName {
 	display: inline-block;
 	text-align: center;
 	background-color: gray;
-
 }
 
 .groupSelected {
 	background-color: #53E295;
+}
+
+.backArrow {
+	height: 45px;
+	width: 45px;
+	display: block;
+	margin-left: 13px;
+	margin-top: 13px;
 }

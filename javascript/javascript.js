@@ -133,6 +133,36 @@ function loadConstituentView(){
 		'</div>');
 		$(".addIcon").click(function(){
 			$(this).replaceWith("<img src='images/checkmark.png' class='checkmarkIcon'>");
+			$(".checkmarkIcon").click(function(){
+				console.log("oh hey, we hear it");
+				$(".mainContentWrapper").html("<img src='images/back-arrow.png' class='backArrow'>" +
+					'<div class="questionWrapper">' +
+			'<h1>Senator Warren wants to know: </h1>' +
+			'<p>Would you rather have a bridge or an awesome new playground (that will be much more fun than a bridge)</p>' +
+			'<button class="questionChoice">Vote A</button>' +
+			'<button class="questionChoice">Vote B</button>' +
+			'<button class="questionChoice">Vote C</button>' +
+		'</div>' +
+		'<div class="commentSectionWrapper">' +
+			'<div class="questionComment">' +
+			'<h5 class="nameOfPoster">Joe the Plumber</h5>' +
+			'<p class="commentFromPoster">Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me Plumbing is important to me</p>' +
+		'</div>' +
+		'<div class="questionComment">' +
+			'<h5 class="nameOfPoster">Barack Obama</h5>' +
+			'<p class="commentFromPoster">I don\'t like plumbing</p>'+
+		'</div>' +
+		
+		'<div class="socialMediaWrapper">' +
+			'<img class="questionImage" src="images/fb.png">' +
+			'<img class="questionImage" src="images/twitter.png">' +	
+		'</div>' +
+			
+		"</div>");
+			$(".backArrow").click(function(){
+				loadGroupsView();
+			});
+			});
 		});
 	}
 	loadGroupsView();
